@@ -188,16 +188,7 @@ class _SkipThreeScreenState extends State<SkipThreeScreen> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-        body:isLoading?Center(
-                        child: SizedBox(
-                          width:100,
-                          height: 100,
-                          child: CircularProgressIndicator(
-                            valueColor: AlwaysStoppedAnimation<Color>(
-                          Color(0xFF69A03A)),
-                          ),
-                        ),
-                      ):
+        body:
         
          Container(
       width: MediaQuery.of(context).size.width,
