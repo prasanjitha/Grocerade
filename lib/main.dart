@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'screens/account_datails.dart';
 import 'screens/add_details_screen.dart';
 import 'screens/authentication_screen.dart';
 import 'screens/confirm_screen.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: AccountDetails(),
     );
   }
 }
