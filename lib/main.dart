@@ -6,6 +6,7 @@ import 'screens/account_datails.dart';
 import 'screens/add_details_screen.dart';
 import 'screens/authentication_screen.dart';
 import 'screens/confirm_screen.dart';
+import 'screens/favourite_screen.dart';
 import 'screens/home_page.dart';
 import 'screens/otp_screen.dart';
 import 'screens/product_details.dart';
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AccountDetails(),
+      home: FavouriteScreen(),
     );
   }
 }
