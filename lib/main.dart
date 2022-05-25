@@ -9,6 +9,7 @@ import 'screens/authentication_screen.dart';
 import 'screens/confirm_screen.dart';
 import 'screens/favourite_screen.dart';
 import 'screens/home_page.dart';
+import 'screens/notification_screen.dart';
 import 'screens/otp_screen.dart';
 import 'screens/product_details.dart';
 import 'screens/setting_screen.dart';
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AccountScreen(),
+      home: NotificationScrennn(),
     );
   }
 }
