@@ -6,6 +6,7 @@ import 'screens/account_datails.dart';
 import 'screens/account_screen.dart';
 import 'screens/add_details_screen.dart';
 import 'screens/authentication_screen.dart';
+import 'screens/change_address.dart';
 import 'screens/confirm_screen.dart';
 import 'screens/favourite_screen.dart';
 import 'screens/home_page.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: LanguageSetting(),
+      home: ChangeAddres(),
     );
   }
 }
