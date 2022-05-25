@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:grocerade/screens/skip_screen.dart';
 
+import 'my_order_screen.dart';
+
 class AccountDetails extends StatefulWidget {
   const AccountDetails({Key? key}) : super(key: key);
 
@@ -16,7 +18,7 @@ class _AccountDetailsState extends State<AccountDetails> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
     MyAccount(),
-    SkipOneScreen(),
+    MyOrder(),
     MyAccount(),
     MyAccount()
   ];
@@ -121,7 +123,10 @@ class MyAccount extends StatelessWidget {
                   style: TextStyle(fontSize: 14, color: Color(0xff393939)),
                 ),
                 selected: true,
-                onTap: () {},
+                onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyOrder()));
+ 
+                },
               ),
               ListTile(
                 leading: Icon(
