@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'screens/account_datails.dart';
 import 'screens/account_screen.dart';
+import 'screens/add_cart_details_screen.dart';
 import 'screens/add_details_screen.dart';
 import 'screens/authentication_screen.dart';
 import 'screens/change_address.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Wishlist(),
+      home: AddCardDetails(),
     );
   }
 }
