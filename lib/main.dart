@@ -9,6 +9,7 @@ import 'screens/authentication_screen.dart';
 import 'screens/change_address.dart';
 import 'screens/confirm_screen.dart';
 import 'screens/favourite_screen.dart';
+import 'screens/help_screen.dart';
 import 'screens/home_page.dart';
 import 'screens/language_setting_screen.dart';
 import 'screens/notification_screen.dart';
@@ -18,6 +19,7 @@ import 'screens/product_details.dart';
 import 'screens/setting_screen.dart';
 import 'screens/shopping_cart.dart';
 import 'screens/splash_screen.dart';
+import 'screens/wishlist.dart';
 import 'widgets/progress_bar_indicator.dart';
 
 void main() {
@@ -34,7 +36,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ShopingCart(),
+      home: Wishlist(),
     );
   }
 }
