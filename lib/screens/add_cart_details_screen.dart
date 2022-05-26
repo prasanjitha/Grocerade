@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:grocerade/screens/confirm_screen.dart';
 import 'package:grocerade/widgets/custom_header.dart';
 
+import 'order_confirm.dart';
+
 class AddCardDetails extends StatelessWidget {
   const AddCardDetails({Key? key}) : super(key: key);
 
@@ -12,7 +14,7 @@ class AddCardDetails extends StatelessWidget {
     return Scaffold(
       floatingActionButton: GestureDetector(
                    onTap: () {
-                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => ConfirmScreen()));
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => OrderCOnfirm()));
  
                 },
         child: Container(

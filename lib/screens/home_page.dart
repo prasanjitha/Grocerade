@@ -3089,15 +3089,22 @@ class Fruits extends StatelessWidget {
               width: 10.0,
             ),
             Stack(children: [
-              Container(
-                width: 118,
-                height: 143,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Image.asset(
-                  'assets/images/fruitsv013.png',
-                  fit: BoxFit.cover,
+              GestureDetector(
+                                onTap: (){
+  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => ProductDetails()));
+              
+                },
+                child: Container(
+                  width: 118,
+                  height: 143,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Image.asset(
+                    'assets/images/fruitsv013.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               Positioned(

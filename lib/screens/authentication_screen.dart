@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:grocerade/screens/confirm_screen.dart';
 import 'package:grocerade/screens/otp_screen.dart';
 
 class AuthenticationScreen extends StatelessWidget {
@@ -39,7 +40,7 @@ class AuthenticationScreen extends StatelessWidget {
               children: [
                 GestureDetector(
                         onTap: () {
-                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => OTPScreen()));
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => ConfirmScreen()));
  
                 },
                   child: Container(

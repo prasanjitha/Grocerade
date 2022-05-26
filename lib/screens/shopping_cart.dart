@@ -13,6 +13,8 @@ class ShopingCart extends StatefulWidget {
 
 class _ShopingCartState extends State<ShopingCart> {
   var num = 0;
+  var num1 = 0;
+  var num2= 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -230,10 +232,11 @@ class _ShopingCartState extends State<ShopingCart> {
                       GestureDetector(
                           onTap: () {
                             setState(() {
-                              if (num > 0) {
-                                num--;
+                             
+                              if ( num1 > 0) {
+                                num1--;
                               } else {
-                                num = 0;
+                                num1 = 0;
                               }
                             });
                           },
@@ -243,12 +246,12 @@ class _ShopingCartState extends State<ShopingCart> {
                             height: 25,
                           )),
                       SizedBox(width: 5),
-                      Text('$num'),
+                      Text('$num1'),
                       SizedBox(width: 5),
                       GestureDetector(
                           onTap: () {
                             setState(() {
-                              num++;
+                              num1++;
                             });
                           },
                           child: Image.asset(
@@ -340,10 +343,10 @@ class _ShopingCartState extends State<ShopingCart> {
                       GestureDetector(
                           onTap: () {
                             setState(() {
-                              if (num > 0) {
-                                num--;
+                              if (num2 > 0) {
+                                num2--;
                               } else {
-                                num = 0;
+                                num2 = 0;
                               }
                             });
                           },
@@ -353,12 +356,12 @@ class _ShopingCartState extends State<ShopingCart> {
                             height: 25,
                           )),
                       SizedBox(width: 5),
-                      Text('$num'),
+                      Text('$num2'),
                       SizedBox(width: 5),
                       GestureDetector(
                           onTap: () {
                             setState(() {
-                              num++;
+                              num2++;
                             });
                           },
                           child: Image.asset(
