@@ -19,6 +19,7 @@ import 'screens/otp_screen.dart';
 import 'screens/product_details.dart';
 import 'screens/setting_screen.dart';
 import 'screens/shopping_cart.dart';
+import 'screens/skip_screen.dart';
 import 'screens/splash_screen.dart';
 import 'screens/wishlist.dart';
 import 'widgets/progress_bar_indicator.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: AddCardDetails(),
+      home: SkipOneScreen(),
     );
   }
 }

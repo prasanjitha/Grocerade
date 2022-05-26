@@ -1,9 +1,14 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:grocerade/screens/account_screen.dart';
+import 'package:grocerade/screens/language_setting_screen.dart';
 import 'package:grocerade/widgets/custom_header.dart';
 
+import 'account_datails.dart';
+import 'change_address.dart';
 import 'my_order_screen.dart';
+import 'notification_screen.dart';
 
 class SettingScreen extends StatelessWidget {
   const SettingScreen({ Key? key }) : super(key: key);
@@ -13,7 +18,14 @@ class SettingScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-         CustomHeader('Settings'),
+         GestureDetector(
+           onTap: (){
+                 Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => AccountDetails()));
+             
+           },
+           
+           child: CustomHeader('Settings')),
          SizedBox(height: 10.0,),
           ListTile(
                 leading: Icon(
@@ -27,7 +39,7 @@ class SettingScreen extends StatelessWidget {
                 ),
                 selected: true,
                 onTap: () {
-                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyOrder()));
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => AccountScreen()));
  
                 },
               ),
@@ -43,7 +55,7 @@ class SettingScreen extends StatelessWidget {
                 ),
                 selected: true,
                 onTap: () {
-                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyOrder()));
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => NotificationScrennn()));
  
                 },
               ),
@@ -59,7 +71,7 @@ class SettingScreen extends StatelessWidget {
                 ),
                 selected: true,
                 onTap: () {
-                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyOrder()));
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => LanguageSetting()));
  
                 },
               ),
@@ -75,7 +87,7 @@ class SettingScreen extends StatelessWidget {
                 ),
                 selected: true,
                 onTap: () {
-                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyOrder()));
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => ChangeAddres()));
  
                 },
               ),

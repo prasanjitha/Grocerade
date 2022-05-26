@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:grocerade/screens/setting_screen.dart';
 import 'package:grocerade/widgets/custom_header.dart';
 
 import 'my_order_screen.dart';
@@ -11,7 +14,12 @@ class AccountScreen extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          CustomHeader('Account Setting'),
+          GestureDetector(
+                            onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => SettingScreen()));
+ 
+                },
+            child: CustomHeader('Account Setting')),
           SizedBox(height: 10.0,),
            ListTile(
                 leading: Icon(

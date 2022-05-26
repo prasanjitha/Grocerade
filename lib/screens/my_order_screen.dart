@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:grocerade/screens/wishlist.dart';
 
 import 'account_datails.dart';
+import 'shopping_cart.dart';
 
 class MyOrder extends StatelessWidget {
   const MyOrder({Key? key}) : super(key: key);
@@ -34,12 +36,18 @@ class MyOrder extends StatelessWidget {
                   SizedBox(
                     width: 10.0,
                   ),
-                  Text(
-                    'My Orders',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                        fontWeight: FontWeight.bold),
+                  GestureDetector(
+                          onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => ShopingCart()));
+ 
+                },
+                    child: Text(
+                      'My Orders',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold),
+                    ),
                   )
                 ],
               ),

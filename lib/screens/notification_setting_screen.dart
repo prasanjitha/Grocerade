@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:grocerade/widgets/custom_header.dart';
 
+import 'notification_screen.dart';
+
 class NotificationSetting extends StatefulWidget {
   const NotificationSetting({Key? key}) : super(key: key);
 
@@ -18,7 +20,12 @@ class _NotificationSettingState extends State<NotificationSetting> {
     return Scaffold(
       body: Column(
         children: [
-          CustomHeader('Notification Setting'),
+          GestureDetector(
+               onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => NotificationScrennn()));
+ 
+                },
+            child: CustomHeader('Notification Setting')),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [

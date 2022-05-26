@@ -1309,6 +1309,8 @@
 
 import 'package:flutter/material.dart';
 
+import 'product_details.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -1427,32 +1429,32 @@ class _HomePageState extends State<HomePage> {
               )
             ],
           ),
-          bottomNavigationBar: BottomNavigationBar(
-    items: const <BottomNavigationBarItem>[
-      BottomNavigationBarItem(
+  //         bottomNavigationBar: BottomNavigationBar(
+  //   items: const <BottomNavigationBarItem>[
+  //     BottomNavigationBarItem(
           
-        icon: Icon(Icons.home),
-        label: 'Home',
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.shopping_cart),
-        label: 'Shopping cart',
-      ),
-      BottomNavigationBarItem(
-        icon: Icon(Icons.favorite),
-        label: 'Favourite',
-      ),
-            BottomNavigationBarItem(
-        icon: Icon(Icons.account_tree_rounded),
-        label: 'My Account',
-      ),
-    ],
-          currentIndex: _selectedIndex,
-      unselectedItemColor: Colors.grey,
-      selectedItemColor: Colors.green,
-      onTap: _onTap,
-      elevation: 15,
-  ),
+  //       icon: Icon(Icons.home),
+  //       label: 'Home',
+  //     ),
+  //     BottomNavigationBarItem(
+  //       icon: Icon(Icons.shopping_cart),
+  //       label: 'Shopping cart',
+  //     ),
+  //     BottomNavigationBarItem(
+  //       icon: Icon(Icons.favorite),
+  //       label: 'Favourite',
+  //     ),
+  //           BottomNavigationBarItem(
+  //       icon: Icon(Icons.account_tree_rounded),
+  //       label: 'My Account',
+  //     ),
+  //   ],
+  //         currentIndex: _selectedIndex,
+  //     unselectedItemColor: Colors.grey,
+  //     selectedItemColor: Colors.green,
+  //     onTap: _onTap,
+  //     elevation: 15,
+  // ),
         ),
         
         );
@@ -1502,15 +1504,22 @@ class Vegitables extends StatelessWidget {
           height: 300,
           child: ListView(scrollDirection: Axis.horizontal, children: [
             Stack(children: [
-              Container(
-                width: 118,
-                height: 143,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Image.asset(
-                  'assets/images/imagesv7.png',
-                  fit: BoxFit.cover,
+              GestureDetector(
+                onTap: (){
+  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => ProductDetails()));
+              
+                },
+                child: Container(
+                  width: 118,
+                  height: 143,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Image.asset(
+                    'assets/images/imagesv7.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               Positioned(

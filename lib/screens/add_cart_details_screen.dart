@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:grocerade/screens/confirm_screen.dart';
 import 'package:grocerade/widgets/custom_header.dart';
 
 class AddCardDetails extends StatelessWidget {
@@ -9,19 +10,25 @@ class AddCardDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Container(
-        margin: EdgeInsets.only(left: 0),
-        width: 375,
-        height: 52,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10.0),
-          color: Color(0xff69A03A),
+      floatingActionButton: GestureDetector(
+                   onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => ConfirmScreen()));
+ 
+                },
+        child: Container(
+          margin: EdgeInsets.only(left: 0),
+          width: 375,
+          height: 52,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10.0),
+            color: Color(0xff69A03A),
+          ),
+          child: Center(
+              child: Text(
+            'PAY NOW',
+            style: TextStyle(color: Colors.white),
+          )),
         ),
-        child: Center(
-            child: Text(
-          'PAY NOW',
-          style: TextStyle(color: Colors.white),
-        )),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

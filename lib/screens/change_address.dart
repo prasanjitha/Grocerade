@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:grocerade/screens/setting_screen.dart';
 import 'package:grocerade/widgets/custom_header.dart';
 
 class ChangeAddres extends StatelessWidget {
@@ -12,7 +13,12 @@ class ChangeAddres extends StatelessWidget {
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          CustomHeader('Change Address'),
+          GestureDetector(
+                  onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => SettingScreen()));
+ 
+                },
+            child: CustomHeader('Change Address')),
           SizedBox(height: 10.0,),
            Padding(
              padding: const EdgeInsets.all(10.0),

@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:grocerade/screens/add_cart_details_screen.dart';
 
 class Wishlist extends StatelessWidget {
   const Wishlist({Key? key}) : super(key: key);
@@ -8,16 +9,22 @@ class Wishlist extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Container(
-        margin: EdgeInsets.only(left: 0),
-        width: 375,
-      height: 52,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10.0),
-        color: Color(0xff69A03A),
-      ),
-      child: Center(child: Text('PAY NOW',style: TextStyle(color: Colors.white),)),
-      
+      floatingActionButton: GestureDetector(
+                   onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => AddCardDetails()));
+ 
+                },
+        child: Container(
+          margin: EdgeInsets.only(left: 0),
+          width: 375,
+        height: 52,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.0),
+          color: Color(0xff69A03A),
+        ),
+        child: Center(child: Text('PAY NOW',style: TextStyle(color: Colors.white),)),
+        
+        ),
       ),
         body: Padding(
           padding: const EdgeInsets.all(20.0),

@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:grocerade/screens/wishlist.dart';
 import 'package:grocerade/widgets/custom_header.dart';
 
 class ShopingCart extends StatefulWidget {
@@ -15,15 +16,21 @@ class _ShopingCartState extends State<ShopingCart> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Container(
-        width: 148.0,
-        height: 40.0,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(7), color: Color(0xff769E49)),
-        child: Center(
-          child: Text(
-            'Place Order',
-            style: TextStyle(fontSize: 14, color: Colors.white),
+      floatingActionButton: GestureDetector(
+                   onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => Wishlist()));
+ 
+                },
+        child: Container(
+          width: 148.0,
+          height: 40.0,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(7), color: Color(0xff769E49)),
+          child: Center(
+            child: Text(
+              'Place Order',
+              style: TextStyle(fontSize: 14, color: Colors.white),
+            ),
           ),
         ),
       ),
