@@ -2,6 +2,9 @@
 
 import 'package:flutter/material.dart';
 
+import 'account_datails.dart';
+import 'home_page.dart';
+
 class ProductDetails extends StatelessWidget {
   const ProductDetails({Key? key}) : super(key: key);
 
@@ -18,13 +21,20 @@ class ProductDetails extends StatelessWidget {
                 'DETAILS',
                 style: TextStyle(color: Colors.white, fontSize: 14),
               )),
-          leading: Container(
-              margin: EdgeInsets.only(top: 40),
-              child: Icon(
-                Icons.arrow_back_ios_new_rounded,
-                color: Colors.white,
-                size: 8,
-              )),
+          leading: GestureDetector(
+            onTap: (){
+                Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => AccountDetails()));
+              
+            },
+            child: Container(
+                margin: EdgeInsets.only(top: 40),
+                child: Icon(
+                  Icons.arrow_back_ios_new_rounded,
+                  color: Colors.white,
+                  size: 8,
+                )),
+          ),
         ),
       ),
       body: Padding(

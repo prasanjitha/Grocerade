@@ -1,8 +1,11 @@
 // ignore_for_file: prefer_const_constructors, prefer_final_fields
 
 import 'package:flutter/material.dart';
+import 'package:grocerade/screens/home_page.dart';
+import 'package:grocerade/screens/setting_screen.dart';
 import 'package:grocerade/screens/skip_screen.dart';
 
+import 'favourite_screen.dart';
 import 'my_order_screen.dart';
 
 class AccountDetails extends StatefulWidget {
@@ -17,9 +20,9 @@ class _AccountDetailsState extends State<AccountDetails> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   List<Widget> _widgetOptions = <Widget>[
-    MyAccount(),
+    HomePage(),
+    FavouriteScreen(),
     MyOrder(),
-    MyAccount(),
     MyAccount()
   ];
 
@@ -152,7 +155,12 @@ class MyAccount extends StatelessWidget {
                   style: TextStyle(fontSize: 14, color: Color(0xff393939)),
                 ),
                 selected: true,
-                onTap: () {},
+                onTap: () {
+
+                   Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => SettingScreen()));
+               
+                },
               ),
               ListTile(
                 leading: Icon(
@@ -227,15 +235,4 @@ class MyAccount extends StatelessWidget {
   }
 }
 
-class My extends StatelessWidget {
-  const My({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        child: Text('hello'),
-      ),
-    );
-  }
-}

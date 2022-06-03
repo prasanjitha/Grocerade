@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 
+import 'otp_screen.dart';
+
 class ConfirmScreen extends StatelessWidget {
   const ConfirmScreen({Key? key}) : super(key: key);
 
@@ -17,12 +19,17 @@ class ConfirmScreen extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 120),
               child: Column(
                 children: [
-                  Center(
-                    child:  Image.asset(
-              'assets/images/group432.png',
-              width: 134,
-              height: 134,
-            )
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) => OTPScreen()));
+                    },
+                    child: Center(
+                        child: Image.asset(
+                      'assets/images/group432.png',
+                      width: 134,
+                      height: 134,
+                    )),
                   ),
                   SizedBox(
                     height: 20.0,
@@ -31,7 +38,7 @@ class ConfirmScreen extends StatelessWidget {
                     'Verification Code Send on ',
                     style: TextStyle(color: Color(0xff707070), fontSize: 14),
                   ),
-                                    Text(
+                  Text(
                     'your Registered Mobile Number ',
                     style: TextStyle(color: Color(0xff707070), fontSize: 14),
                   ),

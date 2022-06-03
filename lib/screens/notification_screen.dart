@@ -1,7 +1,10 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:grocerade/screens/setting_screen.dart';
 import 'package:grocerade/widgets/custom_header.dart';
+
+import 'notification_setting_screen.dart';
 class NotificationScrennn extends StatefulWidget {
   const NotificationScrennn({Key? key}) : super(key: key);
 
@@ -17,7 +20,13 @@ class _NotificationScrennnState extends State<NotificationScrennn> {
     return Scaffold(
       body: Column(
         children: [
-          CustomHeader('Notification'),
+          GestureDetector(
+                            onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => SettingScreen()));
+ 
+                },
+            
+            child: CustomHeader('Notification')),
           Container(
            height: MediaQuery.of(context).size.height * 0.79,
             child: ListView(
@@ -65,7 +74,13 @@ class _NotificationScrennnState extends State<NotificationScrennn> {
                             )),
                       ],
                     )
-                ,Icon(Icons.more_vert)
+                ,GestureDetector(
+                                  onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => NotificationSetting()));
+ 
+                },
+                  
+                  child: Icon(Icons.more_vert))
                 
                   ],
                 ),

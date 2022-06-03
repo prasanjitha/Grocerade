@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 
+import 'add_details_screen.dart';
 import 'authentication_screen.dart';
 
 class OTPScreen extends StatelessWidget {
@@ -120,7 +121,7 @@ class OTPScreen extends StatelessWidget {
             GestureDetector(
               onTap: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) => AuthenticationScreen()));
+                    builder: (context) => AddDetailsScreen()));
               },
               child: Container(
                 width: 335,

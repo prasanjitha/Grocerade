@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:grocerade/screens/wishlist.dart';
 import 'package:grocerade/widgets/custom_header.dart';
 
 class ShopingCart extends StatefulWidget {
@@ -12,18 +13,26 @@ class ShopingCart extends StatefulWidget {
 
 class _ShopingCartState extends State<ShopingCart> {
   var num = 0;
+  var num1 = 0;
+  var num2= 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: Container(
-        width: 148.0,
-        height: 40.0,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(7), color: Color(0xff769E49)),
-        child: Center(
-          child: Text(
-            'Place Order',
-            style: TextStyle(fontSize: 14, color: Colors.white),
+      floatingActionButton: GestureDetector(
+                   onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => Wishlist()));
+ 
+                },
+        child: Container(
+          width: 148.0,
+          height: 40.0,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(7), color: Color(0xff769E49)),
+          child: Center(
+            child: Text(
+              'Place Order',
+              style: TextStyle(fontSize: 14, color: Colors.white),
+            ),
           ),
         ),
       ),
@@ -223,10 +232,11 @@ class _ShopingCartState extends State<ShopingCart> {
                       GestureDetector(
                           onTap: () {
                             setState(() {
-                              if (num > 0) {
-                                num--;
+                             
+                              if ( num1 > 0) {
+                                num1--;
                               } else {
-                                num = 0;
+                                num1 = 0;
                               }
                             });
                           },
@@ -236,12 +246,12 @@ class _ShopingCartState extends State<ShopingCart> {
                             height: 25,
                           )),
                       SizedBox(width: 5),
-                      Text('$num'),
+                      Text('$num1'),
                       SizedBox(width: 5),
                       GestureDetector(
                           onTap: () {
                             setState(() {
-                              num++;
+                              num1++;
                             });
                           },
                           child: Image.asset(
@@ -333,10 +343,10 @@ class _ShopingCartState extends State<ShopingCart> {
                       GestureDetector(
                           onTap: () {
                             setState(() {
-                              if (num > 0) {
-                                num--;
+                              if (num2 > 0) {
+                                num2--;
                               } else {
-                                num = 0;
+                                num2 = 0;
                               }
                             });
                           },
@@ -346,12 +356,12 @@ class _ShopingCartState extends State<ShopingCart> {
                             height: 25,
                           )),
                       SizedBox(width: 5),
-                      Text('$num'),
+                      Text('$num2'),
                       SizedBox(width: 5),
                       GestureDetector(
                           onTap: () {
                             setState(() {
-                              num++;
+                              num2++;
                             });
                           },
                           child: Image.asset(

@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:grocerade/screens/confirm_screen.dart';
+import 'package:grocerade/screens/otp_screen.dart';
 
 class AuthenticationScreen extends StatelessWidget {
   const AuthenticationScreen({Key? key}) : super(key: key);
@@ -36,33 +38,39 @@ class AuthenticationScreen extends StatelessWidget {
             ),
             Row(
               children: [
-                Container(
-                  child: Center(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Image.asset(
-                          'assets/images/search_7.png',
-                          width: 26,
-                          height: 26,
-                        ),
-                        Text(
-                          'Log In with',
-                          style: TextStyle(fontSize: 12),
-                        ),
-                      ],
+                GestureDetector(
+                        onTap: () {
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => ConfirmScreen()));
+ 
+                },
+                  child: Container(
+                    child: Center(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Image.asset(
+                            'assets/images/search_7.png',
+                            width: 26,
+                            height: 26,
+                          ),
+                          Text(
+                            'Log In with',
+                            style: TextStyle(fontSize: 12),
+                          ),
+                        ],
+                      ),
                     ),
+                    margin: EdgeInsets.fromLTRB(16, 8, 8, 16),
+                    width: 160,
+                    height: 45,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        shape: BoxShape.rectangle,
+                        border: Border.all(
+                          color: Color(0xff707070),
+                          width: 2,
+                        )),
                   ),
-                  margin: EdgeInsets.fromLTRB(16, 8, 8, 16),
-                  width: 160,
-                  height: 45,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                      shape: BoxShape.rectangle,
-                      border: Border.all(
-                        color: Color(0xff707070),
-                        width: 2,
-                      )),
                 ),
                  Container(
                   child: Center(
