@@ -34,20 +34,22 @@ class AddDetailsScreen extends StatelessWidget {
                   Navigator.of(context).push(MaterialPageRoute(
                       builder: (context) => HomePage()));
                 },
-                child: Container(
-                  width: 335,
-                  height: 52,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10.0),
-                    color: Color(0xFF69A03A),
-                  ),
-                  child: Center(
-                    child: Text(
-                      'VERIFY',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14),
+                child: Center(
+                  child: Container(
+                    width: 335,
+                    height: 52,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10.0),
+                      color: Color(0xFF69A03A),
+                    ),
+                    child: Center(
+                      child: Text(
+                        'VERIFY',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14),
+                      ),
                     ),
                   ),
                 ),

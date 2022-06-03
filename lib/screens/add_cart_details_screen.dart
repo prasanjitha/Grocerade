@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:grocerade/screens/confirm_screen.dart';
 import 'package:grocerade/widgets/custom_header.dart';
 
 import 'order_confirm.dart';
@@ -27,7 +26,7 @@ class AddCardDetails extends StatelessWidget {
           ),
           child: Center(
               child: Text(
-            'PAY NOW',
+            'PAY NOW ',
             style: TextStyle(color: Colors.white),
           )),
         ),
